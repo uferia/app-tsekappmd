@@ -1,4 +1,5 @@
 // TsekAppMD color palette
+// Source-of-truth palette used by globals.css @theme and any server-side tooling.
 const colors = {
   primary: {
     50: '#eef2ff',

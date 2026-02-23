@@ -31,7 +31,7 @@ export default function OnDutyDoctors({ doctors }: OnDutyDoctorsProps) {
                 <div key={doc.name} className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <div className="flex h-7 w-7 items-center justify-center rounded-full bg-secondary-100 dark:bg-secondary-800 text-xs font-semibold text-secondary-600 dark:text-secondary-300">
-                      {doc.name.split(" ").filter(Boolean).slice(1, 3).map((n) => n[0]).join("")}
+                      {doc.name.replace(/^Dr\.\s*/i, "").split(" ").filter(Boolean).slice(0, 2).map((n) => n[0]).join("")}
                     </div>
                     <span className="text-sm text-secondary-700 dark:text-secondary-300">{doc.name}</span>
                   </div>
